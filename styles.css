@@ -1,0 +1,692 @@
+/* Basic body styling */
+body {
+    margin: 0;
+    font-family: Arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Sticky header styling */
+header {
+    position: relative;
+    top: 0;
+    background-color: #BBE853; /* Light green background for header */
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Logo on the left, menu button on the right */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo styling */
+.logo img {
+    height: 70px; /* Height of the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Menu button styling */
+#menu-btn {
+    background-color: #BBE853; /* Same color as header */
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 40px; /* Increased font size */
+}
+
+/* Menu links styling */
+#menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide menu links initially */
+    position: absolute;
+    top: 70px; /* Adjusted to align under the menu button */
+    background-color: #333; /* Dark background for dropdown */
+    z-index: 1000;
+}
+
+#menu-links li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #444; /* Divider for each menu item */
+}
+
+#menu-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Increased font size for menu links */
+}
+
+/* Hover effect for menu links */
+#menu-links li a:hover {
+    color: #65ff00; /* Fixed color code */
+}
+
+/* Main Image Carousel Section */
+.image-carousel {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Height of carousel */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.carousel-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for carousel */
+    width: calc(100vw * 6); /* Adjust carousel width based on number of images */
+}
+
+.carousel-images img {
+    width: 100vw; /* Full viewport width for each image */
+    height: 70vh; /* Height of carousel images */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+/* Navigation buttons for carousel */
+#prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center the buttons vertically */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px; /* Font size for arrows */
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 10px; /* Position left button */
+}
+
+#next-btn {
+    right: 10px; /* Position right button */
+}
+
+/* Hover effect for navigation buttons */
+#prev-btn:hover, #next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* About Us Section */
+.about-us {
+    padding: 20px;
+    text-align: left; /* Center align the title */
+    background-color: #f9f9f9; /* Light background color for the section */
+}
+
+.about-us h2 {
+    font-size: 32px; /* Title font size */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: left; /* Center align contents */
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 20px; /* Space below the about container */
+}
+
+.about-placeholder {
+    width: 700px; /* Width of the placeholder */
+    padding: 80px;
+    border: 1px solid #ccc; /* Border around the placeholder */
+    background-color: #eaeaea; /* Light gray background */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin-right: 200px; /* Space between text and image */
+}
+
+.about-placeholder p {
+    font-size: 22px; /* Increased font size for the lorem text */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+.placeholder-image img {
+    width: 800px; /* Size of the image next to the about text */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.lorem-image {
+    display: flex;            /* Enable flexbox */
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    height: 100vh;  
+    padding-top: 200px;            /* Optional: set height of the container to full viewport */
+}
+
+.lorem-image img {
+    width: 900px;   /* Set the desired width */
+    height: 900px;  /* Set the desired height */
+    object-fit: cover; /* Ensure the image fills the space without distortion */
+}
+}
+
+.about-images {
+    display: flex; /* Use flexbox for layout */
+    justify-content: left; /* Center align the images */
+    margin-top: 20px; /* Space above the images */
+}
+
+.about-images img {
+    width: 900px; /* Width of images below the about text */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 30px; /* Space between images */
+}
+
+/* Our Partners Section */
+.our-partners {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the logos */
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+    margin: 20px 0; /* Margin above and below the section */
+}
+
+.partner-logo {
+    margin: 10px; /* Space around each logo */
+    width: 150px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Ensure that the image within the logo maintains aspect ratio */
+.partner-logo img {
+    width: 100%; /* Make the logo fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for services section */
+.services {
+    padding: 20px; /* Padding for spacing */
+    text-align: left; /* Centered text */
+    background-color: #e9e9e9; /* Light background for contrast */
+}
+
+.services h2 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.service-item {
+    margin: 10px 0; /* Space between service items */
+}
+
+/* Styles for partners section */
+.partners {
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    background-color: #f5f5f5; /* Light grey background for partners section */
+}
+
+.partners h2 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.partner-logo {
+    margin: 10px; /* Margin for logos */
+    display: inline-block; /* Align logos in a line */
+    width: 100px; /* Set a width for logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments for partner logos */
+@media (max-width: 768px) {
+    .partner-logo {
+        width: 80px; /* Adjust width for smaller screens */
+    }
+}
+
+/* Mission and Approach Sections */
+.mission-section,
+.approach-section {
+    border: 2px solid white; /* White border for both sections */
+    padding: 20px; /* Space inside the box */
+    width: 40%; /* Adjust the width as needed */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    font-size: 20px; /* Set the font size */
+    float: left; /* Align Mission to the left */
+}
+
+.approach-section {
+    float: right; /* Align Our Approach to the right */
+}
+
+/* Responsive adjustments for mission and approach sections */
+@media (max-width: 768px) {
+    .mission-section,
+    .approach-section {
+        width: 100%; /* Full width on small screens */
+        float: none; /* Remove float on smaller screens */
+        margin: 0; /* Reset margins */
+    }
+
+    /* Stack the sections vertically on smaller screens */
+    .mission-section {
+        margin-bottom: 20px; /* Add space below */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #BBE853;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-social {
+    text-align: center;
+    padding: 20px;
+    background-color: #BBE853;
+}
+
+.footer-social .social-icon {
+    margin: 0 30px;
+    display: inline-block;
+}
+
+.footer-social .social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.footer-social .social-icon img:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    text-align: center;
+    color: #000000;
+    background-color: #BBE853;
+    padding: 10px;
+    margin: 0;
+}
+
+/*project page*/
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    margin-top: 20px; /* Add space above the gallery */
+}
+
+.gallery-row {
+    display: flex; /* Use flexbox to arrange images horizontally */
+    justify-content: flex-start; /* Space images evenly */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.gallery a {
+    margin: 10px;
+    text-decoration: none;
+}
+
+.gallery img {
+    width: 200px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ccc; /* Optional styling */
+    border-radius: 5px; /* Optional styling */
+    transition: transform 0.3s; /* Transition effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* General Gallery and Hexagon Styling */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    text-align: center; /* Center the project name below the hexagon */
+}
+
+.hexagon {
+    width: 900px;
+    height: 900px;
+    position: relative;
+    margin: 58px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    background-color: transparent;
+    border: 5px solid #ccc; /* Optional: add border to outline the hexagon */
+    overflow: hidden;
+}
+
+.hexagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: inherit; /* Ensures the image is clipped inside the hexagon */
+    transition: transform 0.3s;
+}
+
+.hexagon img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Project Name Styling */
+.project-name {
+    font-size: 24px;
+    color: #333; /* Adjust this color to match your design */
+    margin-top: 10px;
+    font-weight: bold; /* Optional: make the project names bold */
+}
+
+/* Style for dropdown menu */
+.menu {
+    position: relative;
+}
+
+#menu-links {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white; /* Change to your desired background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Make sure it appears above other elements */
+}
+
+#menu-links.show {
+    display: block; /* Show menu when 'show' class is added */
+}
+
+#menu-links li {
+    list-style: none;
+    padding: 10px;
+}
+
+#menu-links li a {
+    text-decoration: none;
+    color: black; /* Change to your desired link color */
+}
+
+#menu-btn {
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Macnamara stage 2a */
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    margin-top: 20px; /* Add space above the gallery */
+}
+
+.gallery-row {
+    display: flex; /* Use flexbox to arrange images horizontally */
+    justify-content: space-around; /* Space images evenly */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.image-container {
+    flex: 1; /* Allow images to grow and shrink equally */
+    max-width: 600px; /* Set a maximum width for the images */
+    margin: 0 10px; /* Space between images */
+    margin-right: 10px;
+}
+
+.image-container img {
+    width: 150%; /* Make images fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: transform 0.3s; /* Transition effect for hover */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* CSS for overlay text ON SERVICES PAGE LARGE IMAGE */
+.large-image {
+    position: relative;
+    text-align: center;
+    color: #BBE853; /* Change text color for visibility */
+}
+
+.large-image img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to true center */
+    font-size: 3.5rem; /* Change font size as needed */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+}
+
+
+/* Simple styles for the cookie consent banner */
+.cookie-consent {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+/* Close button for cookie consent banner */
+.cookie-consent .close-btn {
+    background: none;
+    border: none;
+    color: #721c24;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
+
+
+/* Styles for the large image */
+.large-image {
+    position: relative;
+    width: 100%;
+    height: 80vh ; /* Set maximum height */
+    overflow: hidden; /* Hide overflow if image exceeds max-height */
+}
+
+.large-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+/* Styles for the clickable text overlay */
+.large-text-link {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center */
+    color: #BBE853; /* Text color */
+    font-size: 4rem; /* Adjust font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+    text-decoration: none; /* Remove underline */
+    background-color: rgba(0, 19, 13, 0.5); /* Semi-transparent background */
+    padding: 15px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.large-text-link:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken on hover */
+}
+
+.policy-links {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space out the content */
+    align-items: flex-start; /* Align items at the top */
+    margin-top: 20px; /* Add some margin on top */
+}
+
+.policy-text {
+    flex: 1; /* Allow the text section to take up available space */
+    margin-right: 20px; /* Add space between text and image */
+}
+
+.policy-text ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.policy-text li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+.policy-text a {
+    font-size: 18px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    color:#BBE853; /* Change text color to #BBE853 */
+    text-decoration: none; /* Remove underline */
+}
+
+.policy-text a:hover {
+    text-decoration: underline; /* Add underline on hover for better visibility */
+}
+
+
+ /* About us */
+ .policy-links {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Add some margin on top */
+}
+
+.policy-text {
+    margin-right: 20px; /* Add space between text and image */
+    padding-left: 50px; /* Add padding to the left for spacing */
+}
+
+.policy-text ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0px; /* Remove default padding */
+}
+
+.policy-text li {
+    margin-bottom: 40px; /* Add space between list items */
+}
+
+.policy-text a {
+    font-size: 26px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    color: #ff8c00; /* Change text color to orange */
+    text-decoration: none; /* Remove underline */
+}
+
+.policy-text a:hover {
+    text-decoration: underline; /* Add underline on hover for better visibility */
+}
+
+.policy-image img {
+    max-width: 1200px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+ /* Contact Form */
+/* Container for the form and head office details */
+.contact-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+/* Styling for the form */
+.contact-form {
+    width: 59%; /* Increased width slightly for better spacing */
+    margin-right: 30%; /* Add some space between form and office box */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    padding: 20px;
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.contact-form button:hover {
+    background-color: #00b4d8;
+}
+
+/* Head Office Box Styling */
+.head-office {
+    width: 40%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid  #1C00ff00;
+    border-radius: 8px;
+}
+
+.head-office h2 {
+    margin-bottom: 10px;
+}
+
+.head-office p {
+    margin: 5px 0;
+}
+
+.map-section {
+    margin-top: 2000px;
+    text-align: center;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 500px;
+}

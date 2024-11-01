@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macnamara Stage 2A</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/CB Civil Logo.jpg" alt="CB Civil Engineering Logo">
+                    </a>
+                </div>
+
+                <div class="menu">
+                    <button id="menu-btn" aria-label="Toggle menu">
+                        <span class="hamburger-icon">&#9776;</span>
+                        Menu
+                    </button>
+                    <ul id="menu-links">
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</head>
+<body>
+
+    <header id="header">
+        <!-- Navigation and header content here -->
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+        <p>If you'd like to get in touch, please fill out the contact form below or use the provided contact details.</p>
+
+        <div class="contact-container">
+            <!-- Contact Form (Left Side) -->
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="+61 123-456-789">
+
+                    <label for="postcode">Postcode:</label>
+                    <input type="text" id="postcode" name="postcode" required>
+                    <label for="message">Message:</label>
+                    
+                    <textarea id="message" name="message" rows="5" required placeholder="Type your message or inquiry here"></textarea>
+
+                    <label for="state">State:</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select a State</option>
+                        <option value="ACT">Australian Capital Territory</option>
+                        <option value="NSW">New South Wales</option>
+                        <option value="NT">Northern Territory</option>
+                        <option value="QLD">Queensland</option>
+                        <option value="SA">South Australia</option>
+                        <option value="TAS">Tasmania</option>
+                        <option value="VIC">Victoria</option>
+                        <option value="WA">Western Australia</option>
+                    </select>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="documents/PrivacyPolicy.pdf">Privacy Policy</a> and <a href="documents/CodeofConduct.pdf">Code of Conduct</a></label>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Head Office Information (Right Side) -->
+            <div class="head-office">
+                <h2>Head Office</h2>
+                <p>Level 1,<br>18 Brebner Street<br>Evatt, ACT 2617</p>
+                <p><strong>Phone:</strong> (02) 1234 1234</p>
+                <p><strong>Email: <a href="mailto:info@cbcivil.com">info@cbcivil.com</a></p>
+                <h3>Weekly Opening Hours:</h3>
+                <p><strong>Mon – Fri:</strong> 8am – 5pm</p>
+                <p><strong>Sat:</strong> 8am – 1pm</p>
+                <p><strong>Sun:</strong> Closed</p>
+
+                <!-- Google Map Embed -->
+                <h3>Find us here:</h3>
+                <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.40036979649!2d149.0531957761659!3d-35.219284090268694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b17ada7b1513457%3A0xcf6919d60d4571a3!2s18%20Brebner%20St%2C%20Evatt%20ACT%202617!5e1!3m2!1sen!2sau!4v1729460890427!5m2!1sen!2sau" 
+                width="800"
+                 height="500" 
+                 style="border:0;"
+                  allowfullscreen=""
+                   loading="lazy" 
+                   referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+    </main>
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.x.com/" target="https://x.com/ThuoPap" class="social-icon">
+                <img src="images/x-icon.png" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                <img src="images/linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://wa.me/your-whatsapp-number" target="_blank" class="social-icon">
+                <img src="images/whatsapp-icon.png" alt="WhatsApp">
+            </a>
+        </div>
+
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:info@cbcivil.com">info@cbcivil.com</a> | Phone: <a href="tel:(02) 1234 1234">(02) 1234 1234</a></p>
+        </div>
+        <p>&copy; 2024 CB Civil. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
